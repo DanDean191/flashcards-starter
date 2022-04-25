@@ -14,7 +14,8 @@ export const topicsSlice = createSlice({
                 icon: icon,
                 quizIds: []
             }
-        }
+        },
+        
     }
 })
 
