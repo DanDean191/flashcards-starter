@@ -1,4 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { addQuizId } from '../topics/topicsSlice';
+
+export const addQuizForTopicId = (quiz) => {
+    const { id, topicId } = quiz;
+    return (dispatch) => {
+        dispatch(addQuiz(quiz))
+        dispatch(addQuizId({
+             quizId: id,
+             topicId: topicId,
+        }))
+    }
+}
 
 export const quizzesSlice = createSlice({
     name: 'quizzes',
@@ -18,7 +30,7 @@ export const quizzesSlice = createSlice({
     }
 })
 
-export const selecteQuizzes = (state) => state.quizzes.quizzes
+export const selectQuizzes = (state) => state.quizzes.quizzes
 
 export const { addQuiz } = quizzesSlice.actions
 
