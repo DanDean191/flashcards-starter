@@ -6,6 +6,7 @@ import { selectCards } from './cardSlice';
 export default function Card({ id }) {
   // replace this with a call to your selector to get all the cards in state
   const cards = useSelector(selectCards) 
+
   const card = cards[id];
   const [flipped, setFlipped] = useState(false);
 

@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import NewQuizForm from "../components/NewQuizForm";
 import NewTopicForm from "../components/NewTopicForm";
+import Home from '../features/home/Home'
 import Topics from "../features/topics/Topics";
 import Topic from "../features/topics/Topic";
 import Quiz from "../features/quizzes/Quiz";
@@ -43,6 +44,9 @@ export default function App() {
         </Route>
         <Route path="/quizzes">
           <QuizRoutes />
+        </Route>
+        <Route path="/">
+          <Home />
         </Route>
       </Switch>
     </Router>

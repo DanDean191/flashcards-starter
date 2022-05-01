@@ -5,7 +5,7 @@ import { selectTopics } from './topicsSlice'
 import { useSelector } from "react-redux";
 
 export default function Topics() {
-  const topics = useSelector(selectTopics);
+  const topics = useSelector(selectTopics)
 
   return (
     <section className="center">
